@@ -11,24 +11,42 @@ function HeroSlider() {
       title: "Beautiful Plant Pots",
       subtitle: "Ceramic & Terracotta Pots ₹149+",
       description: "Stylish pots perfect for your green friends",
-      background: "linear-gradient(rgba(45, 80, 22, 0.7), rgba(74, 124, 89, 0.7)), url('https://images.unsplash.com/photo-1485955900006-10f4d324d411?w=1200&h=600&fit=crop')",
-      features: ["🏺 Premium Pots", "🌿 Plant Ready", "✨ Stylish Design"]
+      background: "linear-gradient(rgba(139, 69, 19, 0.7), rgba(160, 82, 45, 0.7)), url('https://images.unsplash.com/photo-1485955900006-10f4d324d411?w=1200&h=600&fit=crop')",
+      features: ["🏺 Premium Pots", "🌿 Plant Ready", "✨ Stylish Design"],
+      colors: {
+        title: '#8B4513',
+        subtitle: '#A0522D', 
+        text: '#654321',
+        feature: '#8B4513'
+      }
     },
     {
       id: 2,
       title: "Indoor Collection",
       subtitle: "Monstera ₹599 | Snake Plant ₹299",
       description: "Air-purifying plants for your home",
-      background: "linear-gradient(rgba(127, 176, 105, 0.7), rgba(143, 188, 143, 0.7)), url('https://images.unsplash.com/photo-1463320726281-696a485928c7?w=1200&h=600&fit=crop')",
-      features: ["🏠 Ready Plants", "📜 Care Guide", "📞 Support"]
+      background: "linear-gradient(rgba(75, 0, 130, 0.6), rgba(106, 90, 205, 0.6)), url('https://images.unsplash.com/photo-1463320726281-696a485928c7?w=1200&h=600&fit=crop')",
+      features: ["🏠 Ready Plants", "📜 Care Guide", "📞 Support"],
+      colors: {
+        title: '#E6E6FA',
+        subtitle: '#DDA0DD',
+        text: '#F0F8FF',
+        feature: '#9370DB'
+      }
     },
     {
       id: 3,
       title: "Succulents & Herbs",
       subtitle: "Aloe ₹199 | Basil ₹99 | Jade ₹249",
       description: "Low-maintenance & medicinal plants",
-      background: "linear-gradient(rgba(143, 188, 143, 0.7), rgba(167, 201, 87, 0.7)), url('https://images.unsplash.com/photo-1459411621453-7b03977f4bfc?w=1200&h=600&fit=crop')",
-      features: ["💵 Budget-Friendly", "🌿 Medicinal", "📦 Secure"]
+      background: "linear-gradient(rgba(220, 20, 60, 0.6), rgba(255, 69, 0, 0.6)), url('https://images.unsplash.com/photo-1459411621453-7b03977f4bfc?w=1200&h=600&fit=crop')",
+      features: ["💵 Budget-Friendly", "🌿 Medicinal", "📦 Secure"],
+      colors: {
+        title: '#FFE4E1',
+        subtitle: '#FFCCCB',
+        text: '#FFF8DC',
+        feature: '#FF6347'
+      }
     }
   ];
 
@@ -108,8 +126,8 @@ function HeroSlider() {
               fontSize: 'clamp(1.5rem, 4vw, 2.5rem)',
               fontWeight: '800',
               marginBottom: '0.75rem',
-              textShadow: isDark ? '0 2px 4px rgba(0,0,0,0.8)' : '0 2px 4px rgba(255,255,255,0.8)',
-              color: isDark ? 'var(--warm-white)' : 'var(--primary-green)',
+              textShadow: '0 2px 4px rgba(0,0,0,0.8)',
+              color: isDark ? 'var(--warm-white)' : slide.colors.title,
               lineHeight: '1.2',
               wordWrap: 'break-word',
               hyphens: 'auto'
@@ -121,8 +139,8 @@ function HeroSlider() {
               fontSize: 'clamp(0.9rem, 2.5vw, 1.2rem)',
               fontWeight: '600',
               marginBottom: '1rem',
-              color: isDark ? 'var(--light-green)' : 'var(--secondary-green)',
-              textShadow: isDark ? '0 1px 2px rgba(0,0,0,0.8)' : '0 1px 2px rgba(255,255,255,0.8)',
+              color: isDark ? 'var(--light-green)' : slide.colors.subtitle,
+              textShadow: '0 1px 2px rgba(0,0,0,0.8)',
               lineHeight: '1.3',
               wordWrap: 'break-word'
             }}>
@@ -132,8 +150,8 @@ function HeroSlider() {
             <p style={{
               fontSize: 'clamp(0.85rem, 2vw, 1rem)',
               marginBottom: '1.5rem',
-              color: isDark ? 'var(--warm-white)' : 'var(--text-dark)',
-              textShadow: isDark ? '0 1px 2px rgba(0,0,0,0.8)' : '0 1px 2px rgba(255,255,255,0.8)',
+              color: isDark ? 'var(--warm-white)' : slide.colors.text,
+              textShadow: '0 1px 2px rgba(0,0,0,0.8)',
               maxWidth: '90%',
               margin: '0 auto 1.5rem',
               padding: '0 0.5rem',
@@ -160,7 +178,7 @@ function HeroSlider() {
                   borderRadius: '1.5rem',
                   fontSize: 'clamp(0.75rem, 1.8vw, 0.9rem)',
                   fontWeight: '600',
-                  color: isDark ? 'var(--warm-white)' : 'var(--primary-green)',
+                  color: isDark ? 'var(--warm-white)' : slide.colors.feature,
                   border: isDark ? '1px solid rgba(255, 255, 255, 0.3)' : '1px solid rgba(255, 255, 255, 0.5)',
                   whiteSpace: 'nowrap',
                   overflow: 'hidden',
