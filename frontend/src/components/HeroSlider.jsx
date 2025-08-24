@@ -11,42 +11,24 @@ function HeroSlider() {
       title: "Beautiful Plant Pots",
       subtitle: "Ceramic & Terracotta Pots ₹149+",
       description: "Stylish pots perfect for your green friends",
-      background: "linear-gradient(rgba(139, 69, 19, 0.7), rgba(160, 82, 45, 0.7)), url('https://images.unsplash.com/photo-1485955900006-10f4d324d411?w=1200&h=600&fit=crop')",
-      features: ["🏺 Premium Pots", "🌿 Plant Ready", "✨ Stylish Design"],
-      colors: {
-        title: '#8B4513',
-        subtitle: '#A0522D', 
-        text: '#654321',
-        feature: '#8B4513'
-      }
+      background: "linear-gradient(rgba(45, 80, 22, 0.3), rgba(74, 124, 89, 0.3)), url('https://images.unsplash.com/photo-1485955900006-10f4d324d411?w=1200&h=600&fit=crop')",
+      features: ["🏺 Premium Pots", "🌿 Plant Ready", "✨ Stylish Design"]
     },
     {
       id: 2,
       title: "Indoor Collection",
       subtitle: "Monstera ₹599 | Snake Plant ₹299",
       description: "Air-purifying plants for your home",
-      background: "linear-gradient(rgba(75, 0, 130, 0.6), rgba(106, 90, 205, 0.6)), url('https://images.unsplash.com/photo-1463320726281-696a485928c7?w=1200&h=600&fit=crop')",
-      features: ["🏠 Ready Plants", "📜 Care Guide", "📞 Support"],
-      colors: {
-        title: '#E6E6FA',
-        subtitle: '#DDA0DD',
-        text: '#F0F8FF',
-        feature: '#9370DB'
-      }
+      background: "linear-gradient(rgba(127, 176, 105, 0.3), rgba(167, 201, 87, 0.3)), url('https://images.unsplash.com/photo-1463320726281-696a485928c7?w=1200&h=600&fit=crop')",
+      features: ["🏠 Ready Plants", "📜 Care Guide", "📞 Support"]
     },
     {
       id: 3,
       title: "Succulents & Herbs",
       subtitle: "Aloe ₹199 | Basil ₹99 | Jade ₹249",
       description: "Low-maintenance & medicinal plants",
-      background: "linear-gradient(rgba(220, 20, 60, 0.6), rgba(255, 69, 0, 0.6)), url('https://images.unsplash.com/photo-1459411621453-7b03977f4bfc?w=1200&h=600&fit=crop')",
-      features: ["💵 Budget-Friendly", "🌿 Medicinal", "📦 Secure"],
-      colors: {
-        title: '#FFE4E1',
-        subtitle: '#FFCCCB',
-        text: '#FFF8DC',
-        feature: '#FF6347'
-      }
+      background: "linear-gradient(rgba(143, 188, 143, 0.3), rgba(139, 69, 19, 0.2)), url('https://images.unsplash.com/photo-1459411621453-7b03977f4bfc?w=1200&h=600&fit=crop')",
+      features: ["💵 Budget-Friendly", "🌿 Medicinal", "📦 Secure"]
     }
   ];
 
@@ -104,10 +86,10 @@ function HeroSlider() {
             left: 0,
             right: 0,
             bottom: 0,
-            background: `
-              radial-gradient(circle at 20% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
-              radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.05) 0%, transparent 50%)
-            `,
+            background: isDark 
+              ? 'rgba(0, 0, 0, 0.6)'
+              : `radial-gradient(circle at 20% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+                 radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.05) 0%, transparent 50%)`,
             pointerEvents: 'none'
           }}></div>
 
@@ -126,8 +108,8 @@ function HeroSlider() {
               fontSize: 'clamp(1.5rem, 4vw, 2.5rem)',
               fontWeight: '800',
               marginBottom: '0.75rem',
-              textShadow: '0 2px 4px rgba(0,0,0,0.8)',
-              color: isDark ? 'var(--warm-white)' : slide.colors.title,
+              textShadow: '2px 2px 8px rgba(0,0,0,0.9), 0 0 20px rgba(0,0,0,0.7)',
+              color: 'white',
               lineHeight: '1.2',
               wordWrap: 'break-word',
               hyphens: 'auto'
@@ -139,8 +121,8 @@ function HeroSlider() {
               fontSize: 'clamp(0.9rem, 2.5vw, 1.2rem)',
               fontWeight: '600',
               marginBottom: '1rem',
-              color: isDark ? 'var(--light-green)' : slide.colors.subtitle,
-              textShadow: '0 1px 2px rgba(0,0,0,0.8)',
+              color: 'white',
+              textShadow: '2px 2px 6px rgba(0,0,0,0.8), 0 0 15px rgba(0,0,0,0.6)',
               lineHeight: '1.3',
               wordWrap: 'break-word'
             }}>
@@ -150,8 +132,8 @@ function HeroSlider() {
             <p style={{
               fontSize: 'clamp(0.85rem, 2vw, 1rem)',
               marginBottom: '1.5rem',
-              color: isDark ? 'var(--warm-white)' : slide.colors.text,
-              textShadow: '0 1px 2px rgba(0,0,0,0.8)',
+              color: 'white',
+              textShadow: '1px 1px 4px rgba(0,0,0,0.8), 0 0 10px rgba(0,0,0,0.5)',
               maxWidth: '90%',
               margin: '0 auto 1.5rem',
               padding: '0 0.5rem',
@@ -178,7 +160,7 @@ function HeroSlider() {
                   borderRadius: '1.5rem',
                   fontSize: 'clamp(0.75rem, 1.8vw, 0.9rem)',
                   fontWeight: '600',
-                  color: isDark ? 'var(--warm-white)' : slide.colors.feature,
+                  color: isDark ? 'var(--warm-white)' : 'var(--accent-green)',
                   border: isDark ? '1px solid rgba(255, 255, 255, 0.3)' : '1px solid rgba(255, 255, 255, 0.5)',
                   whiteSpace: 'nowrap',
                   overflow: 'hidden',
@@ -244,20 +226,22 @@ function HeroSlider() {
           left: '10px',
           top: '50%',
           transform: 'translateY(-50%)',
-          background: 'rgba(255, 255, 255, 0.2)',
-          backdropFilter: 'blur(10px)',
-          border: '1px solid rgba(255, 255, 255, 0.3)',
+          background: 'linear-gradient(135deg, var(--secondary-green), var(--accent-green))',
+          backdropFilter: 'blur(15px)',
+          border: '2px solid rgba(255, 255, 255, 0.4)',
           borderRadius: '50%',
-          width: '40px',
-          height: '40px',
+          width: '45px',
+          height: '45px',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          color: 'var(--warm-white)',
-          fontSize: '18px',
+          color: 'white',
+          fontSize: '20px',
+          fontWeight: 'bold',
           cursor: 'pointer',
-          transition: 'all 0.3s ease',
-          zIndex: 10
+          transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
+          zIndex: 10,
+          boxShadow: '0 8px 25px var(--shadow-hover)'
         }}
       >
         ‹
@@ -270,20 +254,22 @@ function HeroSlider() {
           right: '10px',
           top: '50%',
           transform: 'translateY(-50%)',
-          background: 'rgba(255, 255, 255, 0.2)',
-          backdropFilter: 'blur(10px)',
-          border: '1px solid rgba(255, 255, 255, 0.3)',
+          background: 'linear-gradient(135deg, var(--secondary-green), var(--accent-green))',
+          backdropFilter: 'blur(15px)',
+          border: '2px solid rgba(255, 255, 255, 0.4)',
           borderRadius: '50%',
-          width: '40px',
-          height: '40px',
+          width: '45px',
+          height: '45px',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          color: 'var(--warm-white)',
-          fontSize: '18px',
+          color: 'white',
+          fontSize: '20px',
+          fontWeight: 'bold',
           cursor: 'pointer',
-          transition: 'all 0.3s ease',
-          zIndex: 10
+          transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
+          zIndex: 10,
+          boxShadow: '0 8px 25px var(--shadow-hover)'
         }}
       >
         ›
@@ -296,20 +282,28 @@ function HeroSlider() {
         left: '50%',
         transform: 'translateX(-50%)',
         display: 'flex',
-        gap: '0.75rem'
+        gap: '0.75rem',
+        background: 'rgba(0, 0, 0, 0.2)',
+        backdropFilter: 'blur(10px)',
+        padding: '0.75rem 1.5rem',
+        borderRadius: '2rem',
+        border: '1px solid rgba(255, 255, 255, 0.2)'
       }}>
         {slides.map((_, index) => (
           <button
             key={index}
             onClick={() => goToSlide(index)}
             style={{
-              width: '12px',
+              width: index === currentSlide ? '24px' : '12px',
               height: '12px',
-              borderRadius: '50%',
-              border: '2px solid rgba(255, 255, 255, 0.5)',
-              background: index === currentSlide ? 'var(--warm-white)' : 'transparent',
+              borderRadius: '6px',
+              border: 'none',
+              background: index === currentSlide 
+                ? 'linear-gradient(135deg, var(--secondary-green), var(--accent-green))' 
+                : 'rgba(255, 255, 255, 0.4)',
               cursor: 'pointer',
-              transition: 'all 0.3s ease'
+              transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
+              boxShadow: index === currentSlide ? '0 4px 15px var(--shadow-hover)' : 'none'
             }}
           />
         ))}

@@ -74,7 +74,8 @@ function TestimonialsSlider() {
         </h3>
         <p style={{
           color: 'var(--text-light)',
-          fontSize: '1.1rem'
+          fontSize: '1.1rem',
+          opacity: 0.8
         }}>
           See what our customers say about their Mini Plant Store experience
         </p>
