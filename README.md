@@ -197,9 +197,6 @@ cd backend && npm start
 4. Push to branch: `git push origin feature-name`
 5. Submit pull request
 
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 👨‍💻 Author
 
@@ -207,7 +204,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Modern e-commerce solution for plant enthusiasts
 - Built with ❤️ for plant lovers
 
-## 🌟 Acknowledgments
+
 
 - Plant images from Unsplash
 - Icons and emojis for enhanced UX
