@@ -184,7 +184,7 @@ cd backend && npm start
 2. Deploy the `dist` folder
 3. Set environment variables
 
-### Backend (Heroku/Railway)
+### Backend (Render)
 1. Push to Git repository
 2. Set environment variables
 3. Deploy with auto-build
