@@ -204,7 +204,7 @@ cd backend && npm start
 - Modern e-commerce solution for plant enthusiasts
 - Built with ❤️ for plant lovers
 
-## 🌟 Acknowledgments
+
 
 - Plant images from Unsplash
 - Icons and emojis for enhanced UX
