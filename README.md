@@ -1,6 +1,6 @@
 # 🌱 Mini Plant Store
 
-A modern, full-stack e-commerce web application for selling plants online. Built with React.js frontend and Node.js backend, featuring a beautiful glass morphism design and complete shopping experience.
+A modern,  e-commerce web application for selling plants online. Built with React.js frontend and Node.js backend, featuring a beautiful glass morphism design and complete shopping experience.
 
 ## ✨ Features
 
